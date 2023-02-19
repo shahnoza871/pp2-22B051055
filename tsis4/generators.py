@@ -26,12 +26,13 @@ while j<int(N)/2:
     j+=1"""
 #3 Define a function with a generator which can iterate the numbers,
 # which are divisible by 3 and 4, between a given range 0 and n.
-cntr = 0
+"""cntr = 0
 def devisible(n):
+    global cntr
     i = 0
     while i<=int(n):
-        if (i>2 and i%3 == 0) or (i>3 and i%4 == 0):
-            cntr += 1                                    # is not incrementing
+        if i%3 == 0 and i%4 == 0:
+            cntr += 1
             yield i
         i+=1
 N = input('Enter a number: ')
@@ -40,7 +41,7 @@ j = 0
 while j < cntr:
     print(next(x))
     j+=1
-
+"""
 #4 Implement a generator called squares to yield the square of all numbers from (a) to (b).
 """import math
 def square(a, b):
